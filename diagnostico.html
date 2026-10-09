@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface":"#f8f9ff","on-primary-container":"#dad7ff","tertiary-fixed":"#6ffbbe","inverse-primary":"#c3c0ff","surface-tint":"#4d44e3","tertiary":"#005338","code-badge-bg":"#EEF2FF","on-tertiary-fixed-variant":"#005236","surface-container-high":"#dce9ff","primary-fixed-dim":"#c3c0ff","on-primary":"#ffffff","on-surface-variant":"#464555","on-error":"#ffffff","surface-bright":"#f8f9ff","surface-card":"#FFFFFF","secondary":"#565e74","on-tertiary-fixed":"#002113","status-warning":"#F59E0B","border-subtle":"#E2E8F0","secondary-fixed":"#dae2fd","on-secondary":"#ffffff","primary-fixed":"#e2dfff","inverse-surface":"#213145","surface-container":"#e5eeff","on-tertiary":"#ffffff","status-neutral-text":"#475569","error":"#ba1a1a","on-secondary-container":"#5c647a","surface-dim":"#cbdbf5","primary":"#3525cd","surface-variant":"#d3e4fe","on-surface":"#0b1c30","status-neutral-bg":"#F1F5F9","status-positive-bg":"#ECFDF5","on-primary-fixed":"#0f0069","tertiary-container":"#006e4b","surface-container-low":"#eff4ff","surface-canvas":"#F8FAFC","inverse-on-surface":"#eaf1ff","status-positive-text":"#047857","tertiary-fixed-dim":"#4edea3","secondary-fixed-dim":"#bec6e0","background":"#f8f9ff","secondary-container":"#dae2fd","outline":"#777587","surface-container-highest":"#d3e4fe","on-tertiary-container":"#67f4b7","on-primary-fixed-variant":"#3323cc","error-container":"#ffdad6","outline-variant":"#c7c4d8","primary-container":"#4f46e5","on-background":"#0b1c30","on-error-container":"#93000a","on-secondary-fixed-variant":"#3f465c"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-desktop":"1.5rem","space-lg":"1.5rem","gutter":"1rem","space-2xl":"3rem","space-xl":"2rem","margin":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","margin-desktop":"2rem","space-md":"1rem"},"fontFamily":{"code-tabular":["JetBrains Mono"],"label-sm":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"label-md":["Inter"],"headline-sm":["Inter"],"body-md":["Inter"],"display":["Inter"],"code-header":["JetBrains Mono"],"headline-md":["Inter"],"headline-lg":["Inter"]},"fontSize":{"code-tabular":["13px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-header":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="SelectKBest Analytics Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ62KaYdNGwcENuGB5ebo9iT6sAhv1vuIRGXk6xZbbnds_9sruOHh_rzgvXr89cpE10CwSQ3g_pKgsttWJpwykkiTJW1tnYi6lhUOgizX6UCxbhgw53s0XFShqIZfYlbjoLiflzl2OYiG8Uu8z66MswMTPAfQIBHQMKGdnJ50XM2fyWG6S6DVxKeNWJnMcyd6PEyUO2XjWUn17NZT5GqbhR5Ygd-j7OoGA_uqPzxRFrzk_wY6G5IJ3"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">FeatureScope AI</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SelectKBest Analytics</span></div></div><div class="h-6 w-px bg-outline-variant/40 hidden md:block"></div><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg"><span class="material-symbols-outlined text-primary text-base">tune</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">Modelo Activo</span><span class="font-code-header text-code-header text-on-surface">SelectKBest (f_classif, k=3)</span></div></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs bg-status-positive-bg px-space-sm py-1 rounded-full text-status-positive-text"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-code-header text-code-header">Completado: 4,119 registros analizados</span></div><button class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-card hover:bg-surface-container-high text-on-surface transition-colors shadow-[0_1px_2px_rgba(15,23,42,0.04)]" type="button"><span class="material-symbols-outlined text-base text-secondary">download</span><span class="font-label-md text-label-md hidden sm:inline">Exportar Informe</span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBob61mCOZZrALHWrOfC8bTjfd-WQ3iynYTfgptpXDDQat56gcYLvZR8q9y0IxXPYdVmOiFHUQTE6cWs-1lYUw4P5KA2pS0zVSQZ-vdhBoDFagKrG5OgfWB0xSGw2nL4m5i0E-BzJS9zQdmsi0hs7EOgfjkhvNnwwyOhQEXz0s_-IVm8FpoVBs3vM1VYS7_mW_F1cormn_tj1MIXaFs9T-9GzRecjm5Ic73hBgR1N2-VdTFBk-KUWVu"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">ML Lead Scientist</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Analytics Hub</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="flex flex-col gap-space-sm"><div class="px-space-md py-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Vistas de Análisis</span></div><nav class="flex flex-col px-space-sm gap-1" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="resumen-ejecutivo" href="#"><span class="material-symbols-outlined text-lg">analytics</span><span class="font-label-md text-label-md">Resumen Ejecutivo</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="analisis-de-variables" href="#"><span class="material-symbols-outlined text-lg">leaderboard</span><span class="font-label-md text-label-md">Análisis de Variables</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="distribucion-y-target" href="#"><span class="material-symbols-outlined text-lg">pie_chart</span><span class="font-label-md text-label-md">Distribución y Target</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="matriz-de-datos-reducida" href="#"><span class="material-symbols-outlined text-lg">table_chart</span><span class="font-label-md text-label-md">Matriz Reducida</span></a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="p-space-sm rounded-lg bg-surface-container-low"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-on-surface-variant">Algoritmo</span><span class="font-code-header text-code-header text-primary">k=3 Top</span></div><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Target</span><span class="font-code-header text-code-header text-tertiary font-bold">y (Depósito)</span></div></div></div></aside><div class="pl-64"><main class="relative pt-16 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<div class="px-space-md sm:px-gutter-desktop py-space-lg flex flex-col gap-space-xl max-w-[1600px] mx-auto w-full">
+<!-- Sub-header & Breadcrumb contextual bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-header text-code-header text-primary px-space-xs py-0.5 rounded bg-code-badge-bg uppercase tracking-widest">SelectKBest Pipeline</span>
+<span class="text-outline-variant font-code-header text-code-header">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">ANOVA F-test Top 3</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Diagnóstico Profundo de Características</h1>
+<p class="font-body-md text-body-md text-secondary max-w-3xl">
+          Evaluación analítica y multivariada de las variables de mayor valor predictivo seleccionadas para la clasificación del depósito a plazo (<code class="font-code-header text-code-header text-primary bg-surface-container px-1 py-0.5 rounded">y</code>).
+        </p>
+</div>
+<!-- Variable Navigation Switcher -->
+<div class="flex items-center p-1 bg-surface-container rounded-xl gap-1 self-start md:self-auto shadow-sm" id="variable-tabs">
+<button class="tab-btn px-space-md py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-space-xs transition-all duration-200 bg-surface-card text-primary shadow-sm font-semibold" data-feature="duration" type="button">
+<span class="material-symbols-outlined text-base">timer</span>
+<span>duration</span>
+<span class="font-code-header text-code-header text-[10px] bg-primary/10 text-primary px-1.5 py-0.2 rounded-full ml-1">Rank #1</span>
+</button>
+<button class="tab-btn px-space-md py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-space-xs transition-all duration-200 text-secondary hover:text-on-surface" data-feature="pdays" type="button">
+<span class="material-symbols-outlined text-base">calendar_month</span>
+<span>pdays</span>
+<span class="font-code-header text-code-header text-[10px] bg-surface-variant text-on-surface-variant px-1.5 py-0.2 rounded-full ml-1">Rank #2</span>
+</button>
+<button class="tab-btn px-space-md py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-space-xs transition-all duration-200 text-secondary hover:text-on-surface" data-feature="nr_employed" type="button">
+<span class="material-symbols-outlined text-base">group</span>
+<span>nr.employed</span>
+<span class="font-code-header text-code-header text-[10px] bg-surface-variant text-on-surface-variant px-1.5 py-0.2 rounded-full ml-1">Rank #3</span>
+</button>
+</div>
+</div>
+<!-- Dynamic Metric Banner & Statistical Cards Container -->
+<div class="w-full" id="feature-panels">
+<!-- Panel: DURATION -->
+<div class="feature-view flex flex-col gap-space-lg" id="panel-duration">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Media General</span>
+<span class="material-symbols-outlined text-base">functions</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface">258.2</span>
+<span class="font-code-header text-code-header text-secondary">seg</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">4m 18s por contacto</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Mediana (Q2)</span>
+<span class="material-symbols-outlined text-base">align_horizontal_center</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface">180.0</span>
+<span class="font-code-header text-code-header text-secondary">seg</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Sesgo positivo acentuado</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Desv. Estándar (σ)</span>
+<span class="material-symbols-outlined text-base">expand</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-display text-display text-on-surface">259.3</span>
+<span class="font-code-header text-code-header text-secondary">seg</span>
+</div>
+<span class="font-body-sm text-body-sm text-status-warning font-semibold mt-1">Alta varianza relativa</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Rango Min - Max</span>
+<span class="material-symbols-outlined text-base">swap_horiz</span>
+</div>
+<div class="mt-space-sm flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-code-tabular text-code-tabular text-on-surface font-semibold">0s</span>
+<span class="text-secondary text-xs">a</span>
+<span class="font-code-tabular text-code-tabular text-on-surface font-semibold">4,918s</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">81.9 minutos máximo</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-primary-container text-on-primary shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10 flex items-center justify-between text-on-primary-container">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Target Lift</span>
+<span class="material-symbols-outlined text-base">troubleshoot</span>
+</div>
+<div class="relative z-10 mt-space-sm">
+<div class="flex items-baseline gap-1">
+<span class="font-display text-display text-on-primary">+150%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-1">
+<span class="font-semibold text-white">553s</span> (Éxito) vs <span class="font-semibold text-white">221s</span> (No)
+              </p>
+</div>
+</div>
+</div>
+<!-- Banner Comparativo Duration -->
+<div class="p-space-lg rounded-xl bg-surface-card shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-xl">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex w-2.5 h-2.5 rounded-full bg-status-positive-text"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Efecto Causal y Condición de Fuga de Información (Data Leakage)</span>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+              La duración de la llamada tiene una capacidad predictiva altísima (<code class="font-code-header text-code-header text-primary">p < 0.001</code>). Las interacciones que convirtieron a plazo fijo requirieron en promedio <strong>9.2 minutos</strong> de conversación, frente a solo <strong>3.7 minutos</strong> en prospectos descartados.
+            </p>
+</div>
+<div class="flex items-center gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Target = No (Media)</span>
+<span class="font-headline-md text-headline-md font-code-tabular text-on-surface">221.0 s</span>
+</div>
+<div class="w-px h-8 bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-status-positive-text font-semibold">Target = Sí (Media)</span>
+<span class="font-headline-md text-headline-md font-code-tabular text-status-positive-text">553.0 s</span>
+</div>
+<div class="hidden sm:flex flex-col text-right pl-space-sm">
+<span class="font-label-sm text-label-sm text-secondary">Delta Absoluto</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">+332.0 s</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel: PDAYS -->
+<div class="feature-view hidden flex flex-col gap-space-lg" id="panel-pdays">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Casos No Contactados</span>
+<span class="material-symbols-outlined text-base">phonelink_erase</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display text-display text-on-surface">96.3%</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Registrados con código <code class="font-code-header text-code-header text-primary">999.0</code></span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Conversión Subcohorte (<999)</span>
+<span class="material-symbols-outlined text-base">bolt</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display text-display text-status-positive-text">65.1%</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Contactados entre 1 y 27 días previos</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Rango Ventana Activa</span>
+<span class="material-symbols-outlined text-base">date_range</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display text-display text-on-surface">1 - 27</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Días transcurridos desde último contacto</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-high shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold text-primary">Distribución</span>
+<span class="material-symbols-outlined text-base text-primary">bar_chart</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-lg text-headline-lg text-on-surface">Extrema Bimodal</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Requiere binarización inmediata</span>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-card shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Asimetría Estructural de <code class="font-code-header text-code-header text-primary">pdays</code></span>
+<p class="font-body-md text-body-md text-secondary max-w-2xl">
+              El valor centinela <code class="font-code-tabular text-code-tabular text-error bg-error-container/40 px-1 py-0.5 rounded">999.0</code> actúa como un indicador cualitativo de primer contacto. Tratado como valor numérico continuo distorsiona los pesos del gradiente y coeficientes de correlación directa.
+            </p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<span class="material-symbols-outlined text-status-warning text-3xl">warning</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Riesgo Numérico Crítico</span>
+<span class="font-body-sm text-body-sm text-secondary">Imputar o transformar antes de alimentar modelos lineales o SVM.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel: NR.EMPLOYED -->
+<div class="feature-view hidden flex flex-col gap-space-lg" id="panel-nr_employed">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Valor Máximo Observado</span>
+<span class="material-symbols-outlined text-base">north_east</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display text-display text-on-surface">5,191.0</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Pico macroeconómico registrado</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Valor Mínimo Observado</span>
+<span class="material-symbols-outlined text-base">south_east</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display text-display text-on-surface">4,963.6</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Nivel en momentos de contracción</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Punto de Inflexión</span>
+<span class="material-symbols-outlined text-base">pivot_table_chart</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display text-display text-on-surface">5,099.1</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Cambio de régimen de conversión</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Correlación con 'y'</span>
+<span class="material-symbols-outlined text-base">trending_down</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display text-display text-error">-0.354</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Fuerte correlación inversa con depósito</span>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-card shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Comportamiento Cíclico Trimestral</span>
+<p class="font-body-md text-body-md text-secondary max-w-2xl">
+              El número de empleados actúa como un termómetro del ciclo económico nacional. En periodos donde el indicador desciende a <strong class="text-on-surface">≤ 5,099</strong>, la captación de depósitos se triplica debido a la preferencia de los consumidores por instrumentos seguros de tasa garantizada.
+            </p>
+</div>
+<div class="flex items-center gap-space-xs bg-status-positive-bg p-space-md rounded-xl text-status-positive-text">
+<span class="material-symbols-outlined text-2xl">insights</span>
+<span class="font-label-md text-label-md font-semibold">Mayor receptividad comercial en recesión</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Visualizations Grid (Bento Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Chart 1: Distribution Curves (Duration by Target) - 7 cols -->
+<div class="lg:col-span-7 bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">ssid_chart</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Densidad Empírica: Duración vs Depósito</h2>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Estimación de densidad por kernel (KDE) para <code class="font-code-header text-code-header text-primary">y='no'</code> y <code class="font-code-header text-code-header text-tertiary">y='yes'</code></span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-secondary font-medium">Rechazo (no)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="text-primary-container font-semibold">Suscrito (yes)</span>
+</div>
+</div>
+</div>
+<!-- SVG Distribution Density Chart -->
+<div class="relative w-full h-64 sm:h-72 mt-2">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 650 260">
+<!-- Gridlines -->
+<line class="text-border-subtle" stroke="currentColor" stroke-width="1" x1="40" x2="630" y1="220" y2="220"></line>
+<line class="text-border-subtle" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1" x1="40" x2="630" y1="165" y2="165"></line>
+<line class="text-border-subtle" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1" x1="40" x2="630" y1="110" y2="110"></line>
+<line class="text-border-subtle" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1" x1="40" x2="630" y1="55" y2="55"></line>
+<!-- Y Axis labels -->
+<text fill="#94A3B8" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="32" y="224">0.00</text>
+<text fill="#94A3B8" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="32" y="169">0.04</text>
+<text fill="#94A3B8" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="32" y="114">0.08</text>
+<text fill="#94A3B8" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="32" y="59">0.12</text>
+<!-- Curve Target = 'no' (Aggressive peak at ~180s, fast drop) -->
+<path d="M 50 220 
+                     C 70 218, 90 40, 110 38 
+                     C 130 36, 160 140, 200 185 
+                     C 250 205, 320 215, 420 218 
+                     C 480 219, 580 220, 620 220" fill="url(#grad-no)"></path>
+<path d="M 50 220 
+                     C 70 218, 90 40, 110 38 
+                     C 130 36, 160 140, 200 185 
+                     C 250 205, 320 215, 420 218 
+                     C 480 219, 580 220, 620 220" stroke="#64748B" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Curve Target = 'yes' (Broad distribution, peaks ~550s) -->
+<path d="M 50 220 
+                     C 90 218, 140 180, 180 130 
+                     C 220 80, 260 65, 310 70 
+                     C 370 76, 430 130, 490 175 
+                     C 550 205, 590 216, 620 220" fill="url(#grad-yes)" opacity="0.8"></path>
+<path d="M 50 220 
+                     C 90 218, 140 180, 180 130 
+                     C 220 80, 260 65, 310 70 
+                     C 370 76, 430 130, 490 175 
+                     C 550 205, 590 216, 620 220" stroke="#4F46E5" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Highlight Median markers -->
+<line stroke="#64748B" stroke-dasharray="4 2" stroke-width="1.5" x1="110" x2="110" y1="38" y2="220"></line>
+<circle cx="110" cy="38" fill="#64748B" r="4"></circle>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" font-weight="600" text-anchor="middle" x="110" y="28">Med: 180s (No)</text>
+<line stroke="#4F46E5" stroke-dasharray="4 2" stroke-width="1.5" x1="290" x2="290" y1="67" y2="220"></line>
+<circle cx="290" cy="67" fill="#4F46E5" r="4"></circle>
+<text fill="#4F46E5" font-family="JetBrains Mono" font-size="10" font-weight="600" text-anchor="middle" x="290" y="28">Media: 553s (Sí)</text>
+<!-- X Axis ticks -->
+<text fill="#64748B" font-family="JetBrains Mono" font-size="11" x="50" y="240">0s</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="11" x="180" y="240">300s</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="11" x="310" y="240">600s</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="11" x="440" y="240">900s</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="11" x="570" y="240">1500s+</text>
+<defs>
+<lineargradient id="grad-no" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#94A3B8" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#94A3B8" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="grad-yes" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4F46E5" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#4F46E5" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="mt-space-sm pt-space-sm flex items-center justify-between text-secondary">
+<span class="font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-status-positive-text">check_circle</span>
+            Filtro Kolmogorov-Smirnov: distancia D = 0.518 (alta separabilidad de clases)
+          </span>
+<span class="font-code-header text-code-header text-[11px] text-on-surface-variant">4,119 muestras</span>
+</div>
+</div>
+<!-- Chart 2: Scatter / Dual Density (Duration vs nr.employed) - 5 cols -->
+<div class="lg:col-span-5 bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">scatter_plot</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Duración vs nr.employed</h2>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Agrupación por macroeconomía y tiempo de contacto</span>
+</div>
+<span class="font-code-header text-code-header text-xs text-primary bg-primary/10 px-2 py-0.5 rounded-full font-bold">2D Space</span>
+</div>
+<!-- Styled Scatter Plot Simulation -->
+<div class="relative w-full h-64 sm:h-72 mt-2">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 450 260">
+<!-- Backdrop Threshold Lines -->
+<line stroke="#E2E8F0" stroke-dasharray="4 4" stroke-width="1.5" x1="45" x2="430" y1="125" y2="125"></line>
+<line stroke="#E2E8F0" stroke-dasharray="4 4" stroke-width="1.5" x1="220" x2="220" y1="20" y2="225"></line>
+<!-- Labels for threshold -->
+<text fill="#94A3B8" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="430" y="120">Umbral Empleo 5,099</text>
+<text fill="#94A3B8" font-family="JetBrains Mono" font-size="10" x="225" y="32">300s Duración</text>
+<!-- Clustered Data Points (Non-conversion: High employment, low duration) -->
+<!-- Group No (Gray dots) -->
+<circle cx="80" cy="50" fill="#94A3B8" opacity="0.6" r="3.5"></circle>
+<circle cx="100" cy="70" fill="#94A3B8" opacity="0.6" r="3.5"></circle>
+<circle cx="95" cy="45" fill="#94A3B8" opacity="0.7" r="4"></circle>
+<circle cx="120" cy="60" fill="#94A3B8" opacity="0.6" r="3.5"></circle>
+<circle cx="140" cy="55" fill="#94A3B8" opacity="0.5" r="3"></circle>
+<circle cx="160" cy="80" fill="#94A3B8" opacity="0.8" r="4"></circle>
+<circle cx="110" cy="90" fill="#94A3B8" opacity="0.6" r="3.5"></circle>
+<circle cx="130" cy="100" fill="#94A3B8" opacity="0.7" r="4"></circle>
+<circle cx="170" cy="65" fill="#94A3B8" opacity="0.6" r="3.5"></circle>
+<circle cx="180" cy="95" fill="#94A3B8" opacity="0.5" r="3"></circle>
+<circle cx="90" cy="105" fill="#94A3B8" opacity="0.6" r="4"></circle>
+<circle cx="150" cy="40" fill="#94A3B8" opacity="0.6" r="3.5"></circle>
+<circle cx="75" cy="85" fill="#94A3B8" opacity="0.5" r="3"></circle>
+<!-- Mixed Middle Section -->
+<circle cx="190" cy="140" fill="#94A3B8" opacity="0.6" r="4"></circle>
+<circle cx="210" cy="155" fill="#94A3B8" opacity="0.6" r="3.5"></circle>
+<circle cx="250" cy="85" fill="#4F46E5" opacity="0.75" r="4"></circle>
+<circle cx="270" cy="70" fill="#4F46E5" opacity="0.8" r="4.5"></circle>
+<!-- Group Yes Conversion (Bottom Right & Low employment or long duration) -->
+<circle cx="280" cy="160" fill="#4F46E5" opacity="0.9" r="5"></circle>
+<circle cx="310" cy="145" fill="#4F46E5" opacity="0.85" r="4.5"></circle>
+<circle cx="330" cy="170" fill="#4F46E5" opacity="0.9" r="5"></circle>
+<circle cx="360" cy="150" fill="#4F46E5" opacity="0.8" r="4"></circle>
+<circle cx="380" cy="180" fill="#4F46E5" opacity="0.95" r="5.5"></circle>
+<circle cx="395" cy="165" fill="#4F46E5" opacity="0.85" r="4"></circle>
+<circle cx="340" cy="190" fill="#4F46E5" opacity="0.9" r="5"></circle>
+<circle cx="290" cy="185" fill="#4F46E5" opacity="0.8" r="4.5"></circle>
+<circle cx="410" cy="195" fill="#4F46E5" opacity="0.9" r="5"></circle>
+<circle cx="270" cy="205" fill="#4F46E5" opacity="0.75" r="4"></circle>
+<circle cx="320" cy="210" fill="#4F46E5" opacity="0.85" r="4.5"></circle>
+<circle cx="360" cy="200" fill="#4F46E5" opacity="0.9" r="5"></circle>
+<!-- Axes -->
+<line stroke="#CBD5E1" stroke-width="1.5" x1="45" x2="430" y1="225" y2="225"></line>
+<line stroke="#CBD5E1" stroke-width="1.5" x1="45" x2="45" y1="20" y2="225"></line>
+<!-- Y Axis values (nr.employed reversed/scaled) -->
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="38" y="25">5,191</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="38" y="128">5,099</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="38" y="222">4,963</text>
+<!-- X Axis values (Duration) -->
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" x="50" y="242">0s</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" x="220" y="242">300s</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="420" y="242">1,200s+</text>
+</svg>
+</div>
+<div class="mt-space-sm p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Zona Óptima de Conversión:</span>
+</div>
+<span class="font-code-header text-code-header text-primary font-semibold">Duración > 350s + Empleo ≤ 5,099</span>
+</div>
+</div>
+</div>
+<!-- Correlation & Matrix Section + Preprocessing Recommendations Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Pearson Correlation Matrix Table - 6 cols -->
+<div class="lg:col-span-6 bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">grid_on</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Matriz de Correlación de Pearson (r)</h2>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Interrelación entre las variables del subset y el target binario</span>
+</div>
+<span class="font-code-header text-code-header text-xs text-secondary bg-surface-container px-2 py-0.5 rounded">p < 0.001</span>
+</div>
+<!-- Styled Correlation Heatmap Grid -->
+<div class="w-full overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-surface-canvas text-secondary font-code-header text-code-header text-left">
+<th class="p-space-sm rounded-l-lg">Variable</th>
+<th class="p-space-sm text-right">duration</th>
+<th class="p-space-sm text-right">pdays</th>
+<th class="p-space-sm text-right">nr.employed</th>
+<th class="p-space-sm text-right rounded-r-lg text-primary font-bold">target (y)</th>
+</tr>
+</thead>
+<tbody class="font-code-tabular text-code-tabular text-on-surface divide-y divide-border-subtle">
+<tr class="hover:bg-surface-canvas transition-colors">
+<td class="p-space-sm font-semibold text-secondary">duration</td>
+<td class="p-space-sm text-right font-medium bg-primary/5 text-primary">1.000</td>
+<td class="p-space-sm text-right text-secondary">-0.047</td>
+<td class="p-space-sm text-right text-secondary">-0.045</td>
+<td class="p-space-sm text-right font-bold text-status-positive-text bg-status-positive-bg">+0.405</td>
+</tr>
+<tr class="hover:bg-surface-canvas transition-colors">
+<td class="p-space-sm font-semibold text-secondary">pdays</td>
+<td class="p-space-sm text-right text-secondary">-0.047</td>
+<td class="p-space-sm text-right font-medium bg-primary/5 text-primary">1.000</td>
+<td class="p-space-sm text-right font-semibold text-primary">+0.271</td>
+<td class="p-space-sm text-right font-bold text-error bg-error-container/20">-0.325</td>
+</tr>
+<tr class="hover:bg-surface-canvas transition-colors">
+<td class="p-space-sm font-semibold text-secondary">nr.employed</td>
+<td class="p-space-sm text-right text-secondary">-0.045</td>
+<td class="p-space-sm text-right font-semibold text-primary">+0.271</td>
+<td class="p-space-sm text-right font-medium bg-primary/5 text-primary">1.000</td>
+<td class="p-space-sm text-right font-bold text-error bg-error-container/20">-0.354</td>
+</tr>
+<tr class="hover:bg-surface-canvas transition-colors bg-primary/5 font-semibold">
+<td class="p-space-sm text-primary">target (y)</td>
+<td class="p-space-sm text-right text-status-positive-text bg-status-positive-bg">+0.405</td>
+<td class="p-space-sm text-right text-error bg-error-container/20">-0.325</td>
+<td class="p-space-sm text-right text-error bg-error-container/20">-0.354</td>
+<td class="p-space-sm text-right text-primary font-bold">1.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Legend Matrix Info -->
+<div class="mt-space-md flex flex-wrap items-center justify-between gap-space-sm text-body-sm text-secondary pt-space-xs">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-status-positive-text"></span> Positiva fuerte</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-error"></span> Negativa fuerte</span>
+</div>
+<span class="font-code-header text-code-header text-[11px] text-on-surface-variant">Sin multicolinealidad crítica (<0.70)</span>
+</div>
+</div>
+<!-- Preprocessing & Feature Engineering Recommendations - 6 cols -->
+<div class="lg:col-span-6 bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">auto_fix_high</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recomendaciones de Preprocesamiento</h2>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Ajustes obligatorios previos a LogisticRegression o Redes Neuronales</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-positive-text bg-status-positive-bg px-2.5 py-1 rounded-full font-bold">Scikit-Learn Ready</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Recommendation 1: pdays binarization -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-surface-card flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-code-header">
+              01
+            </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Binarización y Flag para <code class="font-code-header text-code-header text-primary">pdays</code></span>
+<span class="font-code-header text-[10px] text-error bg-error-container/40 px-1.5 py-0.2 rounded font-bold">Imprescindible</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                Convertir el valor <code class="font-code-tabular text-code-tabular text-on-surface">999.0</code> creando la variable booleana <code class="font-code-header text-code-header text-primary">pdays_contacted = (pdays ≠ 999)</code>. Imputar o escalar el valor continuo solo para registros con contacto previo real.
+              </p>
+</div>
+</div>
+<!-- Recommendation 2: RobustScaler vs StandardScaler -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-surface-card flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-code-header">
+              02
+            </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Escalado Robusto para <code class="font-code-header text-code-header text-primary">duration</code></span>
+<span class="font-code-header text-[10px] text-status-warning bg-status-neutral-bg px-1.5 py-0.2 rounded font-bold">RobustScaler</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                Debido a los valores atípicos severos (máximo de 4,918s vs mediana de 180s), aplicar <code class="font-code-header text-code-header text-primary">RobustScaler()</code> (basado en IQR) o transformación logarítmica <code class="font-code-header text-code-header text-primary">log1p(duration)</code>.
+              </p>
+</div>
+</div>
+<!-- Recommendation 3: nr.employed normalization -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-surface-card flex items-center justify-center shrink-0 shadow-sm text-primary font-bold font-code-header">
+              03
+            </div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Estandarización Z-Score para <code class="font-code-header text-code-header text-primary">nr.employed</code></span>
+<span class="font-code-header text-[10px] text-status-positive-text bg-status-positive-bg px-1.5 py-0.2 rounded font-bold">StandardScaler</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                Rango restringido continuo (4,963 a 5,191). Aplicar <code class="font-code-header text-code-header text-primary">StandardScaler()</code> para centrar en μ=0 y σ=1 sin distorsionar la tendencia macroeconómica.
+              </p>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-end">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">code</span>
+<span>Copiar Pipeline Sklearn (ColumnTransformer)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Data Sampling Reference Table -->
+<div class="bg-surface-card rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">dataset</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Muestreo del Espacio Reducido (Top 3 Features)</h2>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Primeros registros del dataset transformado tras aplicar SelectKBest</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-header text-code-header text-xs text-secondary bg-surface-canvas px-2.5 py-1 rounded">X_new.shape: (4119, 3)</span>
+</div>
+</div>
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-canvas text-secondary font-code-header text-code-header">
+<th class="p-space-sm text-center w-16"># Index</th>
+<th class="p-space-sm text-right">duration (s)</th>
+<th class="p-space-sm text-right">pdays (días)</th>
+<th class="p-space-sm text-right">nr.employed</th>
+<th class="p-space-sm text-center">y (Target Real)</th>
+<th class="p-space-sm text-right">P(y = 'yes') Est.</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-code-tabular text-code-tabular text-on-surface">
+<tr class="hover:bg-surface-canvas/60 transition-colors">
+<td class="p-space-sm text-center text-outline font-mono">0001</td>
+<td class="p-space-sm text-right font-medium">487.0</td>
+<td class="p-space-sm text-right text-secondary">999.0</td>
+<td class="p-space-sm text-right">5,191.0</td>
+<td class="p-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-status-neutral-bg text-status-neutral-text font-code-header">no</span>
+</td>
+<td class="p-space-sm text-right font-medium text-secondary">0.142</td>
+</tr>
+<tr class="hover:bg-surface-canvas/60 transition-colors">
+<td class="p-space-sm text-center text-outline font-mono">0002</td>
+<td class="p-space-sm text-right font-medium">346.0</td>
+<td class="p-space-sm text-right text-primary font-bold">6.0</td>
+<td class="p-space-sm text-right">5,099.1</td>
+<td class="p-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-status-positive-bg text-status-positive-text font-code-header">yes</span>
+</td>
+<td class="p-space-sm text-right font-bold text-status-positive-text">0.812</td>
+</tr>
+<tr class="hover:bg-surface-canvas/60 transition-colors">
+<td class="p-space-sm text-center text-outline font-mono">0003</td>
+<td class="p-space-sm text-right font-medium">120.0</td>
+<td class="p-space-sm text-right text-secondary">999.0</td>
+<td class="p-space-sm text-right">5,191.0</td>
+<td class="p-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-status-neutral-bg text-status-neutral-text font-code-header">no</span>
+</td>
+<td class="p-space-sm text-right font-medium text-secondary">0.038</td>
+</tr>
+<tr class="hover:bg-surface-canvas/60 transition-colors">
+<td class="p-space-sm text-center text-outline font-mono">0004</td>
+<td class="p-space-sm text-right font-medium">745.0</td>
+<td class="p-space-sm text-right text-secondary">999.0</td>
+<td class="p-space-sm text-right">4,963.6</td>
+<td class="p-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-status-positive-bg text-status-positive-text font-code-header">yes</span>
+</td>
+<td class="p-space-sm text-right font-bold text-status-positive-text">0.789</td>
+</tr>
+<tr class="hover:bg-surface-canvas/60 transition-colors">
+<td class="p-space-sm text-center text-outline font-mono">0005</td>
+<td class="p-space-sm text-right font-medium">178.0</td>
+<td class="p-space-sm text-right text-secondary">999.0</td>
+<td class="p-space-sm text-right">5,099.1</td>
+<td class="p-space-sm text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-status-neutral-bg text-status-neutral-text font-code-header">no</span>
+</td>
+<td class="p-space-sm text-right font-medium text-secondary">0.091</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Interactive Logic for Feature Switching -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.tab-btn');
+      const panels = {
+        duration: document.getElementById('panel-duration'),
+        pdays: document.getElementById('panel-pdays'),
+        nr_employed: document.getElementById('panel-nr_employed')
+      };
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const feature = tab.getAttribute('data-feature');
+
+          // Reset all tabs
+          tabs.forEach(t => {
+            t.classList.remove('bg-surface-card', 'text-primary', 'shadow-sm', 'font-semibold');
+            t.classList.add('text-secondary');
+          });
+
+          // Activate clicked tab
+          tab.classList.add('bg-surface-card', 'text-primary', 'shadow-sm', 'font-semibold');
+          tab.classList.remove('text-secondary');
+
+          // Toggle visibility of panels
+          Object.keys(panels).forEach(key => {
+            if (key === feature) {
+              panels[key].classList.remove('hidden');
+            } else {
+              panels[key].classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</div></main></div></body></html>
